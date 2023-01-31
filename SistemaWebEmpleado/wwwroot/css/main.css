@@ -1,0 +1,67 @@
+﻿﻿body {
+    margin: 0;
+    box-sizing: border-box;
+    background-color: darkorange;
+    color: black;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+   
+}
+
+img {
+    width: 10%;
+
+}
+
+nav{
+    margin-top: 10px;
+    background-color: darkolivegreen;
+    display:flex;
+    justify-content: space-around;
+    
+}
+
+#header {
+    top: 0;
+    position: fixed;
+    width: 100%;
+    background-color: dodgerblue;
+    color: white;
+    text-align: center;
+}
+
+#main {
+    
+    
+}
+
+.content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.sidebar1, .sidebar2 {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    gap: 20px;
+    padding-top: 3%;
+    width: 100%;
+    background-color: white;
+    color: black
+}
+
+
+#footer {
+    text-align: center;
+    background-color: dodgerblue;
+    color: white;
+    clear: both;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}

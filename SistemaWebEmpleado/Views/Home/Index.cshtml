@@ -2,6 +2,15 @@
     ViewData["Title"] = "Index Home";
 }
 
-<h2>@ViewBag.Nombre</h2>
 <h3>@ViewBag.Fecha</h3>
-@Html.ActionLink("Ir a empleados", "Index", "Empleados")
+<h2>@ViewBag.Nombre</h2>
+@Html.ActionLink("Ir a empleados", "Index", "Empleado")
+
+@section SideBar
+{
+    <div class="sidebar1">
+    <h2>Bienvenidos!</h2>
+    <img src="https://w7.pngwing.com/pngs/357/112/png-transparent-emoticon-smiley-smilies-happy-shadow.png" alt="imagen" />
+    </div>
+
+}

@@ -91,26 +91,26 @@ namespace SistemaWebEmpleado.Controllers
         [HttpGet]
         public ActionResult Details(int id)
         {
-            var opera = TraerUno(id);
-            if (opera == null)
+            var empleado = TraerUno(id);
+            if (empleado == null)
             {
                 return NotFound();
             }
             else
             {
 
-                return View("Detalle", opera);
+                return View("Detalle", empleado);
             }
         }
 
-        [HttpGet("titulo/{titulo}")]
+        [HttpGet("{titulo}")]
         public ActionResult<Empleado> GetByTitulo(string titulo)
         {
 
-            Empleado empleado = (from e in context.Empleados
+            List<Empleado> empleados = (from e in context.Empleados
                                  where e.Título == titulo
-                                 select e).SingleOrDefault();
-            return View("GetByTitulo", empleado);
+                                 select e).ToList();
+            return View("GetByTitulo", empleados);
         }
 
         private Empleado TraerUno(int id)
