@@ -99,7 +99,30 @@ namespace SistemaWebEmpleado.Controllers
             else
             {
 
-                return View("Detalle", empleado);
+                return View("Details", empleado);
+            }
+        }
+
+        [HttpGet]
+        public ActionResult Edit(int id)
+        {
+            Empleado empleado = TraerUno(id);
+            return View("Edit", empleado);
+        }
+
+        [HttpPost]
+        [ActionName("Edit")]
+        public ActionResult EditConfirmed(int id, Empleado empleado)
+        {
+            if (id != empleado.Id)
+            {
+                return NotFound();
+            }
+            else
+            {
+                context.Entry(empleado).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
+                context.SaveChanges();
+                return RedirectToAction("Index");
             }
         }
 
