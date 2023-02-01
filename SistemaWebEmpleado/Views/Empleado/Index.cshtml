@@ -5,7 +5,9 @@
 }
 
 @Html.ActionLink("Crear", "Create", "Empleado")
-
+@section SideBar{
+    <h2>Administración de empleados</h2>
+}
 <table>
     <tr>
         <th>@Html.DisplayNameFor(model => model.Id)</th>
@@ -52,4 +54,9 @@
         </tr>
 
     }
-</table> 
+</table>
+
+
+
+
+Sino cuando agreguemos más modelos/vistas todos tendran "Administración Empleados"

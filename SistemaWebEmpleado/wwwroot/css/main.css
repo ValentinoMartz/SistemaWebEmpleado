@@ -1,11 +1,14 @@
-﻿﻿body {
+﻿/** {
+    margin: 0;
+}﻿*/
+
+body {
     margin: 0;
     box-sizing: border-box;
     background-color: darkorange;
     color: black;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     text-align: center;
-   
 }
 
 img {
